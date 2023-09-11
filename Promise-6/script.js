@@ -1,4 +1,3 @@
-
 const options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -26,7 +25,6 @@ navigator.geolocation.getCurrentPosition(onsuccess, onerror, options);
 //   // 
 // }, {})
 
-
 // Challenge: Make this work: 
 
 function getGeolocation(options) {
@@ -40,4 +38,3 @@ function getGeolocation(options) {
 getGeolocation(options)
   .then(pos => { })
   .catch(err => { })
-
