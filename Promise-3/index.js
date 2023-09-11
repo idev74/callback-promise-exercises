@@ -35,11 +35,25 @@ greet('Your name') // Returns a Promise
   .then(str => console.log(str)) // Log the results of uppercaser()
   .catch(err => console.log(err)) // Catches an error
 
+greet(12)
+.then(str => uppercaser(str))
+.then(str => console.log(str))
+.catch(err => console.log(err));
+
+uppercaser(123)
+.then(str => console.log(str))
+.catch(err => console.log(err));
+
 // Challenges: get greet() to fail by passing a non string value
 // What happens? 
+// The promise gets rejected with an "ERR_UNHANDLED_REJECTION" error. 
+// Specifically, the error is "Greet expects a string!"
 
 // Challenge: get uppercaser() to fail by passing a non string value
 // What happens? 
+// The promise gets rejected with an "ERR_UNHANDLED_REJECTION" error. 
+// Specifically, the error is "Argument to uppercaser must be string."
 
 // Challenge: Notice there is only a single .catch() at the end. 
 // Explain the behavior?
+// The .catch() at the end catches any errors that occur throughout the function execution.
